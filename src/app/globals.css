@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS custom properties — injected by layout.tsx via inline <style> at runtime.
+   These defaults are used during SSR before hydration. */
+:root {
+  --color-primary: #1b2a4a;
+  --color-primary-dark: #0f1b2d;
+  --color-accent: #c49a28;
+  --color-accent-light: #e8b84b;
+  --color-accent-subtle: rgba(196, 154, 40, 0.12);
+  --color-surface: #f8f7f4;
+  --color-surface-dark: #f0eee9;
+  --color-border: rgba(0, 0, 0, 0.07);
+  --color-text-primary: #0f1b2d;
+  --color-text-secondary: #5a6478;
+  --color-text-muted: #9ca3af;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    /* Prevent any animated element from creating a horizontal scrollbar */
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply font-inter;
+    color: var(--color-text-primary);
+    background-color: #ffffff;
+    /* Belt-and-suspenders: both html and body need this for iOS Safari */
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sora;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  *:focus-visible {
+    @apply ring-2 ring-offset-2;
+    ring-color: var(--color-accent);
+  }
+}
+
+@layer components {
+  /* ── Buttons ────────────────────────────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2.5
+           px-7 py-3.5 rounded-xl
+           font-inter font-semibold text-sm
+           transition-all duration-200;
+    background-color: var(--color-primary);
+    color: #ffffff;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    @apply shadow-lg -translate-y-px;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2.5
+           px-7 py-3.5 rounded-xl
+           font-inter font-semibold text-sm
+           transition-all duration-200;
+    background-color: var(--color-accent);
+    color: #0f1b2d;
+  }
+  .btn-accent:hover {
+    background-color: var(--color-accent-light);
+    @apply shadow-lg -translate-y-px;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2.5
+           px-7 py-3.5 rounded-xl
+           font-inter font-semibold text-sm
+           transition-all duration-200;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background-color: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+  }
+  .btn-ghost:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2.5
+           px-7 py-3.5 rounded-xl
+           font-inter font-semibold text-sm
+           transition-all duration-200;
+    background-color: #25d366;
+    color: #ffffff;
+  }
+  .btn-whatsapp:hover {
+    background-color: #1dae54;
+    @apply shadow-lg -translate-y-px;
+  }
+
+  /* ── Form ───────────────────────────────────────────────────────────── */
+  .input-field {
+    @apply w-full border rounded-xl px-4 py-3
+           font-inter text-sm
+           transition-all duration-200
+           focus:outline-none focus:border-transparent;
+    border-color: var(--color-border);
+    color: var(--color-text-primary);
+    background-color: #ffffff;
+  }
+  .input-field::placeholder {
+    color: var(--color-text-muted);
+  }
+  .input-field:focus {
+    @apply ring-2;
+    ring-color: var(--color-accent);
+  }
+
+  /* ── Typography ─────────────────────────────────────────────────────── */
+  .overline {
+    @apply font-inter font-semibold text-xs uppercase tracking-[0.15em];
+    color: var(--color-accent);
+  }
+
+  .section-heading {
+    @apply font-sora font-bold text-3xl md:text-4xl leading-[1.15];
+    color: var(--color-primary);
+  }
+
+  /* ── Layout ─────────────────────────────────────────────────────────── */
+  .section-pad {
+    @apply py-24 md:py-32;
+  }
+
+  .container-xl {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* ── Decorative ─────────────────────────────────────────────────────── */
+  .dot-grid {
+    background-image: radial-gradient(
+      circle,
+      var(--color-accent) 1px,
+      transparent 1px
+    );
+    background-size: 32px 32px;
+  }
+
+  .line-grid {
+    background-image:
+      linear-gradient(var(--color-accent) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-accent) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* ── Card base ──────────────────────────────────────────────────────── */
+  .card {
+    @apply rounded-2xl bg-white;
+    box-shadow:
+      0 2px 20px rgba(0, 0, 0, 0.07),
+      0 0 0 1px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  .card-hover:hover {
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.12),
+      0 0 0 1px rgba(0, 0, 0, 0.04);
+    transform: translateY(-3px);
+  }
+
+  /* ── Stats band mobile fix ───────────────────────────────────────────── */
+  /* Remove the JS-injected borderRight on mobile — only show col dividers on lg */
+  .stats-divider {
+    border-right: none;
+  }
+  @media (min-width: 1024px) {
+    .stats-divider {
+      border-right: 1px solid rgba(0, 0, 0, 0.09);
+    }
+  }
+}

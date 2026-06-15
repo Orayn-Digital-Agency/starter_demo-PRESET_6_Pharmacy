@@ -1,6 +1,6 @@
 // ============================================================
 // ORAYN DEMO TEMPLATE — STARTER
-// PRESET: Plumbing Service / Trade & Services
+// PRESET: Salon / Beauty & Wellness
 // ============================================================
 
 export type Service = {
@@ -32,93 +32,93 @@ export type BusinessData = {
 };
 
 const businessData: BusinessData = {
-  businessName: "ProFlow Plumbing",
+  businessName: "Lumiere Beauty Studio",
   tagline:
-    "Expert plumbing services for homes and commercial properties across Lagos. Fast response, clean workmanship.",
-  phone: "+234 803 456 7891",
-  whatsappNumber: "2348034567891",
-  email: "info@proflow.ng",
-  address: "22 Ogba Road, Ikeja",
+    "Premium hair, skin, and nail services in a relaxed, professional environment. Where you leave looking and feeling your best.",
+  phone: "+234 805 678 9012",
+  whatsappNumber: "2348056789012",
+  email: "bookings@lumierebeauty.ng",
+  address: "5 Admiralty Way, Lekki Phase 1",
   city: "Lagos",
-  category: "Plumbing Services",
-  industry: "Trade & Services",
-  logoText: "ProFlow",
+  category: "Salon",
+  industry: "Beauty & Wellness",
+  logoText: "Lumiere",
   primaryColor: "#1B2A4A",
   accentColor: "#C49A28",
-  ctaLabel: "Book a Plumber",
+  ctaLabel: "Book an Appointment",
 
   about:
-    "ProFlow Plumbing has been solving water and drainage problems across Lagos for over 9 years. Our licensed plumbers handle everything from blocked drains and burst pipes to full bathroom installations and borehole pump maintenance. We work clean, price fairly, and stand behind every job we do.",
+    "Lumiere Beauty Studio has been Lagos's trusted name in premium beauty care for over 7 years. Our team of certified stylists and beauty professionals specialise in natural hair, protective styles, skin treatments, and nail art. We use only high-grade products and maintain strict hygiene standards so every visit feels like a treat, not just a routine.",
 
   services: [
     {
-      name: "Pipe Repair & Replacement",
+      name: "Hair Relaxing & Texturising",
       description:
-        "Burst pipes, leaking joints, and corroded lines repaired or fully replaced with quality materials that last.",
-      icon: "Wrench",
+        "Professional relaxer treatments, texturisers, and keratin straightening using premium salon-grade products for lasting results.",
+      icon: "Sparkles",
     },
     {
-      name: "Drain Unblocking",
+      name: "Protective Styles",
       description:
-        "Fast clearance of blocked sinks, toilets, and sewage drains. High-pressure jetting available for stubborn blockages.",
-      icon: "Zap",
+        "Braids, twists, weaves, and crochet styles done with care. All hair types and lengths welcome.",
+      icon: "Star",
     },
     {
-      name: "Bathroom & Kitchen Fitting",
+      name: "Natural Hair Care",
       description:
-        "Complete bathroom installations — WCs, basins, showers, bathtubs, and kitchen sink fittings done neatly.",
-      icon: "Home",
+        "Deep conditioning, steam treatments, wash-and-go sets, and twist-outs tailored to your curl pattern.",
+      icon: "Leaf",
     },
     {
-      name: "Borehole & Water Pump Service",
+      name: "Facials & Skin Treatments",
       description:
-        "Submersible pump installation, servicing, and repair. Pressure tank fitting and overhead tank connections.",
-      icon: "Settings",
+        "Deep cleansing facials, brightening treatments, and hydration therapies for all skin tones and types.",
+      icon: "Heart",
     },
     {
-      name: "Water Heater Installation",
+      name: "Manicure & Pedicure",
       description:
-        "Electric and gas water heater supply and installation. Solar water heating systems also available.",
-      icon: "Sun",
+        "Classic and gel manicures, spa pedicures, nail art, and extensions. Impeccably clean tools, every time.",
+      icon: "Gem",
     },
     {
-      name: "Commercial Plumbing",
+      name: "Makeup & Bridal Beauty",
       description:
-        "Plumbing works for offices, hotels, restaurants, and industrial facilities. Planned maintenance contracts available.",
-      icon: "Factory",
+        "Professional makeup for events, photoshoots, and weddings. Airbrush and HD makeup available.",
+      icon: "Camera",
     },
   ],
 
   whyUs: [
-    "9 years of trusted plumbing work across Lagos",
-    "Licensed and insured — all jobs fully covered",
-    "Same-day emergency response, 7 days a week",
-    "Upfront pricing before we start any work",
+    "7 years of excellence in Lagos beauty care",
+    "Certified stylists trained locally and internationally",
+    "Strict hygiene protocols and premium product lines",
+    "Relaxed, welcoming atmosphere — walk-ins accepted",
   ],
 
   openingHours: [
-    { day: "Monday – Friday", hours: "7:00 AM – 7:00 PM" },
-    { day: "Saturday", hours: "8:00 AM – 5:00 PM" },
-    { day: "Sunday", hours: "Emergency calls only" },
+    { day: "Monday – Friday", hours: "9:00 AM – 7:00 PM" },
+    { day: "Saturday", hours: "8:00 AM – 7:00 PM" },
+    { day: "Sunday", hours: "10:00 AM – 5:00 PM" },
   ],
 
   gallery: [
     {
-      src: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1200&q=85&auto=format&fit=crop",
-      alt: "Plumber working on bathroom pipe installation",
+      src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=85&auto=format&fit=crop",
+      alt: "Professional hair styling at Lumiere Beauty Studio",
     },
     {
-      src: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1200&q=85&auto=format&fit=crop",
-      alt: "Clean finished bathroom plumbing installation",
+      src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=85&auto=format&fit=crop",
+      alt: "Facial treatment in progress",
     },
     {
-      src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=85&auto=format&fit=crop",
-      alt: "Water pump and borehole equipment",
+      src: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=85&auto=format&fit=crop",
+      alt: "Nail art and manicure services",
     },
   ],
 
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.5!2d3.3478!3d6.6050!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b923a8b3c1111%3A0x0!2sIkeja%2C%20Lagos!5e0!3m2!1sen!2sng!4v1716000000001",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7!2d3.4739!3d6.4281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf53c7d4b0001%3A0x0!2sLekki%20Phase%201%2C%20Lagos!5e0!3m2!1sen!2sng!4v1716000000002",
 };
 
 export default businessData;
